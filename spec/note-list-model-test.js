@@ -6,9 +6,7 @@ describe("NoteList", function() {
 
   it("returns all the notes in the array", function() {
     var noteList = new NoteList();
-    var note = new Note("Hello");
-    noteList.add(note);
-
+    noteList.add("Hello");
     expect(noteList.getNotes()[0].text).toEqual("Hello");
   });
 });
