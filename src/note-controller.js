@@ -5,11 +5,6 @@
     this.noteListView = new NoteListView(noteList);
   }
 
-  // NoteController.prototype.render = function() {
-  //   var view = this.noteListView.getHTML();
-  //   document.getElementById('app').innerHTML = view;
-  // };
-
   NoteController.prototype.render = function() {
     var view = this.noteListView.getHTML();
     document.getElementById('app').innerHTML = view;
