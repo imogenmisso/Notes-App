@@ -1,6 +1,8 @@
 describe("NoteController", function() {
   it("can be instantiated", function() {
-    var noteController = new NoteController(new NoteList());
+    var noteList = new NoteList();
+    noteList.add("Favourite drink: seltzer");
+    var noteController = new NoteController(noteList);
     expect(noteController.noteList.getNotes()[0].text).toEqual("Favourite drink: seltzer");
   });
 
@@ -44,7 +46,7 @@ describe("NoteController", function() {
         hash: "#notes/0"
       }
     };
-    
+
     noteController.render();
 
     expect(window.location.hash).toEqual("#notes/0");
