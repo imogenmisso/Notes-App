@@ -13,5 +13,13 @@
     return this.notes;
   };
 
+  NoteList.prototype.getNoteById = function(id) {
+    for (var i = 0; i < this.notes.length; i++) {
+      if (this.notes[i].id == id) {
+        return this.notes[i].text;
+      }
+    }
+  };
+
   exports.NoteList = NoteList;
 })(this);

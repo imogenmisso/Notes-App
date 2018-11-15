@@ -4,6 +4,10 @@
     <title></title>
   </head>
   <body>
+    <div>
+      <a href="/">Home</a>
+    </div>
+    <hr>
     <div id="app">
       hello
     </div>
@@ -11,5 +15,9 @@
     <script src="src/note-list-model.js"></script>
     <script src="src/note-list-view.js"></script>
     <script src="src/note-controller.js"></script>
+    <script>
+      var noteController = new NoteController(new NoteList());
+      noteController.render();
+    </script>
   </body>
 </html>
