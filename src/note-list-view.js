@@ -7,9 +7,9 @@
     var view = '<ul>'
     this.noteList.getNotes().forEach(function(note) {
       if (note.text.length > 20) {
-        view += '<li><div>' + note.text.slice(0, 20) + '...</div></li>'
+        view += '<li><div><a href="http://localhost:8080#notes/' + note.id + '">' + note.text.slice(0, 20) + '...</a></div></li>'
       } else {
-        view += '<li><div>' + note.text + '</div></li>'
+        view += '<li><div><a href="http://localhost:8080#notes/' + note.id + '">' + note.text + '</a></div></li>'
       }
       })
       view += '</ul>'
