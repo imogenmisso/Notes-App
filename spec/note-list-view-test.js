@@ -26,4 +26,12 @@ describe("NoteListView", function() {
     expect(noteListView.getHTML()).toEqual('<ul><li><div>' + "Hello Henry" + '</div></li><li><div>' + "Hello Imogen" + '</div></li></ul>')
   })
 
+  it("returns only the first 20 characters of the note", function() {
+    var noteList = new NoteList()
+    noteList.add("This is a long note with over 20 characters")
+    var noteListView = new NoteListView(noteList);
+    console.log(noteListView.getHTML())
+    expect(noteListView.getHTML()).toEqual('<ul><li><div>' + "This is a long note ..." + '</div></li></ul>')
+  })
+
 })
