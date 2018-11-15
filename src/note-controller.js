@@ -29,6 +29,12 @@
         .getElementById("app")
         .innerHTML = noteText;
     }
+
+    var button = document.getElementById('submit_button')
+      button.addEventListener('click', function(event) {
+        console.log(document.getElementById('note_text').value)
+        event.preventDefault();
+      })
   };
 
   exports.NoteController = NoteController;
