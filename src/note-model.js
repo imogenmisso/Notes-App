@@ -1,6 +1,7 @@
 (function(exports) {
-  function Note(text) {
-    this.text = text
+  function Note(text, id) {
+    this.text = text;
+    this.id = id;
   }
-  exports.Note = Note
+  exports.Note = Note;
 })(this);
